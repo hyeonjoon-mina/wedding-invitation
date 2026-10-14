@@ -530,7 +530,6 @@
 
   async function handleShare() {
     const shareData = {
-      title: '현준 그리고 민아, 결혼합니다',
       url: window.location.href
     };
 
