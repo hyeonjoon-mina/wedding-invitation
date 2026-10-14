@@ -1,0 +1,722 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#3a342e">
+  <meta name="description" content="문현준 · 조민아 결혼합니다. 2027년 2월 27일 토요일 오전 11시, 더 바실리움">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="문현준 ♥ 조민아 결혼합니다">
+  <meta property="og:description" content="2027년 2월 27일 토요일 오전 11시 · 더 바실리움">
+  <meta property="og:image" content="images/hero.jpg">
+  <title>문현준 ♥ 조민아 결혼합니다</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <div class="invitation">
+    <!-- =========================================
+         1. 메인 (헤더 / HERO)
+    ========================================== -->
+    <header class="hero" id="hero">
+      <div class="hero__overlay"></div>
+      <div class="hero__content">
+        <p class="hero__eyebrow">WEDDING INVITATION</p>
+        <div class="ornament" aria-hidden="true"><span></span><i>✦</i><span></span></div>
+        <h1 class="hero__title">문현준 <em>그리고</em> 조민아</h1>
+        <p class="hero__subtitle">서로의 가장 좋은 친구가 되어<br>같은 방향을 바라보며 걸어가려 합니다.</p>
+        <p class="hero__date">2027. 02. 27 SAT · 오전 11시</p>
+        <p class="hero__place">더 바실리움 · 코리아디자인센터 8층</p>
+        <a class="scroll-cue" href="#invitation" aria-label="초대글로 이동">
+          <span>SCROLL</span>
+          <i class="scroll-arrow" aria-hidden="true">↓</i>
+        </a>
+      </div>
+    </header>
+
+    <!-- =========================================
+         메인 스크롤 시 위로 올라오는 콘텐츠 영역
+    ========================================== -->
+    <div class="main-content">
+      <!-- =========================================
+           2. 초대 (INVITATION)
+      ========================================== -->
+      <section class="section invitation-section reveal" id="invitation">
+        <p class="section-kicker">WITH JOY AND GRATITUDE</p>
+        <h2 class="section-title">소중한 분들을<br>초대합니다</h2>
+        <div class="flower-deco" aria-hidden="true">❀</div>
+        <div class="invitation-text">
+          <p>두 사람이 사랑과 믿음으로<br>한 길을 함께 걸어가려 합니다.</p>
+          <p>함께한 계절의 아름다움처럼<br>서로를 아끼고 배려하며 살아가겠습니다.</p>
+          <p>귀한 걸음으로 축복해 주신다면<br>더없는 기쁨으로 간직하겠습니다.</p>
+        </div>
+        <div class="family-lines">
+          <p><span>문영태 · 김순엽</span>의 장남 <strong>현준</strong></p>
+          <p><span>조영식 · 임정분</span>의 차녀 <strong>민아</strong></p>
+        </div>
+      </section>
+
+      <!-- =========================================
+           3. 캘린더 (CALENDAR & D-DAY)
+      ========================================== -->
+      <section class="section date-section reveal" id="calendar">
+        <p class="section-kicker">THE WEDDING DAY</p>
+        <h2 class="section-title">우리의 날</h2>
+        <div class="date-card">
+          <div class="date-month">FEBRUARY <span>2027</span></div>
+          <div class="calendar" aria-label="2027년 2월 달력">
+            <span>일</span><span>월</span><span>화</span><span>수</span><span>목</span><span>금</span><span>토</span>
+            <span
+              class="muted">31</span><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span>
+            <span>7</span><span>8</span><span>9</span><span>10</span><span>11</span><span>12</span><span>13</span>
+            <span>14</span><span>15</span><span>16</span><span>17</span><span>18</span><span>19</span><span>20</span>
+            <span>21</span><span>22</span><span>23</span><span>24</span><span>25</span><span>26</span><span
+              class="wedding-day">27</span>
+            <span>28</span><span class="muted">1</span><span class="muted">2</span><span class="muted">3</span><span
+              class="muted">4</span><span class="muted">5</span><span class="muted">6</span>
+          </div>
+          <div class="date-divider"></div>
+          <p class="date-full">2027년 2월 27일 토요일 오전 11시</p>
+          <div class="dday-box" id="ddayBox">
+            <span class="dday-sub">현준 ♥ 민아의 결혼식까지</span>
+            <strong class="dday-count" id="ddayCount">D-DAY</strong>
+          </div>
+          <a class="text-link" href="assets/wedding.ics" download>캘린더 일정 저장하기 ↗</a>
+        </div>
+      </section>
+
+      <!-- =========================================
+           4. 앨범 (GALLERY)
+      ========================================== -->
+      <section class="section gallery-section reveal" id="gallery">
+        <p class="section-kicker">OUR MOMENTS</p>
+        <h2 class="section-title">소중한 순간</h2>
+        <p class="gallery-sub">좌우로 넘겨 사진을 감상해 보세요.</p>
+
+        <div class="gallery-slider-wrap">
+          <button type="button" class="slider-arrow slider-prev" id="sliderPrev" aria-label="이전 사진 보기">‹</button>
+
+          <div class="gallery-slider" id="gallerySlider">
+            <div class="gallery-slide">
+              <button type="button" class="gallery-item" data-index="0" data-image="images/photo01.jpg"
+                aria-label="웨딩 사진 1 크게 보기">
+                <img src="images/photo01.jpg" alt="문현준 조민아 웨딩 사진 1" loading="lazy" decoding="async">
+              </button>
+            </div>
+            <div class="gallery-slide">
+              <button type="button" class="gallery-item" data-index="1" data-image="images/photo02.jpg"
+                aria-label="웨딩 사진 2 크게 보기">
+                <img src="images/photo02.jpg" alt="문현준 조민아 웨딩 사진 2" loading="lazy" decoding="async">
+              </button>
+            </div>
+            <div class="gallery-slide">
+              <button type="button" class="gallery-item" data-index="2" data-image="images/photo03.jpg"
+                aria-label="웨딩 사진 3 크게 보기">
+                <img src="images/photo03.jpg" alt="문현준 조민아 웨딩 사진 3" loading="lazy" decoding="async">
+              </button>
+            </div>
+            <div class="gallery-slide">
+              <button type="button" class="gallery-item" data-index="3" data-image="images/photo04.jpg"
+                aria-label="웨딩 사진 4 크게 보기">
+                <img src="images/photo04.jpg" alt="문현준 조민아 웨딩 사진 4" loading="lazy" decoding="async">
+              </button>
+            </div>
+            <div class="gallery-slide">
+              <button type="button" class="gallery-item" data-index="4" data-image="images/photo05.jpg"
+                aria-label="웨딩 사진 5 크게 보기">
+                <img src="images/photo05.jpg" alt="문현준 조민아 웨딩 사진 5" loading="lazy" decoding="async">
+              </button>
+            </div>
+            <div class="gallery-slide">
+              <button type="button" class="gallery-item" data-index="5" data-image="images/photo06.jpg"
+                aria-label="웨딩 사진 6 크게 보기">
+                <img src="images/photo06.jpg" alt="문현준 조민아 웨딩 사진 6" loading="lazy" decoding="async">
+              </button>
+            </div>
+            <div class="gallery-slide">
+              <button type="button" class="gallery-item" data-index="6" data-image="images/photo07.jpg"
+                aria-label="웨딩 사진 7 크게 보기">
+                <img src="images/photo07.jpg" alt="문현준 조민아 웨딩 사진 7" loading="lazy" decoding="async">
+              </button>
+            </div>
+            <div class="gallery-slide">
+              <button type="button" class="gallery-item" data-index="7" data-image="images/photo08.jpg"
+                aria-label="웨딩 사진 8 크게 보기">
+                <img src="images/photo08.jpg" alt="문현준 조민아 웨딩 사진 8" loading="lazy" decoding="async">
+              </button>
+            </div>
+            <div class="gallery-slide">
+              <button type="button" class="gallery-item" data-index="8" data-image="images/photo09.jpg"
+                aria-label="웨딩 사진 9 크게 보기">
+                <img src="images/photo09.jpg" alt="문현준 조민아 웨딩 사진 9" loading="lazy" decoding="async">
+              </button>
+            </div>
+            <div class="gallery-slide">
+              <button type="button" class="gallery-item" data-index="9" data-image="images/photo10.jpg"
+                aria-label="웨딩 사진 10 크게 보기">
+                <img src="images/photo10.jpg" alt="문현준 조민아 웨딩 사진 10" loading="lazy" decoding="async">
+              </button>
+            </div>
+            <div class="gallery-slide">
+              <button type="button" class="gallery-item" data-index="10" data-image="images/photo11.jpg"
+                aria-label="웨딩 사진 11 크게 보기">
+                <img src="images/photo11.jpg" alt="문현준 조민아 웨딩 사진 11" loading="lazy" decoding="async">
+              </button>
+            </div>
+            <div class="gallery-slide">
+              <button type="button" class="gallery-item" data-index="11" data-image="images/photo12.jpg"
+                aria-label="웨딩 사진 12 크게 보기">
+                <img src="images/photo12.jpg" alt="문현준 조민아 웨딩 사진 12" loading="lazy" decoding="async">
+              </button>
+            </div>
+            <div class="gallery-slide">
+              <button type="button" class="gallery-item" data-index="12" data-image="images/photo13.jpg"
+                aria-label="웨딩 사진 13 크게 보기">
+                <img src="images/photo13.jpg" alt="문현준 조민아 웨딩 사진 13" loading="lazy" decoding="async">
+              </button>
+            </div>
+            <div class="gallery-slide">
+              <button type="button" class="gallery-item" data-index="13" data-image="images/photo14.jpg"
+                aria-label="웨딩 사진 14 크게 보기">
+                <img src="images/photo14.jpg" alt="문현준 조민아 웨딩 사진 14" loading="lazy" decoding="async">
+              </button>
+            </div>
+            <div class="gallery-slide">
+              <button type="button" class="gallery-item" data-index="14" data-image="images/photo15.jpg"
+                aria-label="웨딩 사진 15 크게 보기">
+                <img src="images/photo15.jpg" alt="문현준 조민아 웨딩 사진 15" loading="lazy" decoding="async">
+              </button>
+            </div>
+            <div class="gallery-slide">
+              <button type="button" class="gallery-item" data-index="15" data-image="images/photo16.jpg"
+                aria-label="웨딩 사진 16 크게 보기">
+                <img src="images/photo16.jpg" alt="문현준 조민아 웨딩 사진 16" loading="lazy" decoding="async">
+              </button>
+            </div>
+            <div class="gallery-slide">
+              <button type="button" class="gallery-item" data-index="16" data-image="images/photo17.jpg"
+                aria-label="웨딩 사진 17 크게 보기">
+                <img src="images/photo17.jpg" alt="문현준 조민아 웨딩 사진 17" loading="lazy" decoding="async">
+              </button>
+            </div>
+            <div class="gallery-slide">
+              <button type="button" class="gallery-item" data-index="17" data-image="images/photo18.jpg"
+                aria-label="웨딩 사진 18 크게 보기">
+                <img src="images/photo18.jpg" alt="문현준 조민아 웨딩 사진 18" loading="lazy" decoding="async">
+              </button>
+            </div>
+            <div class="gallery-slide">
+              <button type="button" class="gallery-item" data-index="18" data-image="images/photo19.jpg"
+                aria-label="웨딩 사진 19 크게 보기">
+                <img src="images/photo19.jpg" alt="문현준 조민아 웨딩 사진 19" loading="lazy" decoding="async">
+              </button>
+            </div>
+            <div class="gallery-slide">
+              <button type="button" class="gallery-item" data-index="19" data-image="images/photo20.jpg"
+                aria-label="웨딩 사진 20 크게 보기">
+                <img src="images/photo20.jpg" alt="문현준 조민아 웨딩 사진 20" loading="lazy" decoding="async">
+              </button>
+            </div>
+          </div>
+
+          <button type="button" class="slider-arrow slider-next" id="sliderNext" aria-label="다음 사진 보기">›</button>
+        </div>
+
+        <div class="slider-pagination">
+          <div class="slider-counter" id="sliderCounter"><strong>1</strong> / 20</div>
+          <div class="slider-progress-bar">
+            <div class="slider-progress-fill" id="sliderProgressFill" style="width: 5%;"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========================================
+           5. 오시는 길 (LOCATION & TRANSPORT)
+      ========================================== -->
+      <section class="section location-section reveal" id="location">
+        <p class="section-kicker">LOCATION</p>
+        <h2 class="section-title">오시는 길</h2>
+
+        <div class="venue-info">
+          <p class="venue-name">더 바실리움</p>
+          <p class="venue-sub">코리아디자인센터 8층</p>
+          <p class="address" id="address">경기도 성남시 분당구 양현로 322<br>(야탑동 344-1, 코리아디자인센터 8층)</p>
+          <p class="venue-tel">TEL. 031-788-7070</p>
+        </div>
+
+        <button class="button button-outline" id="copy-address" type="button">주소 복사하기</button>
+
+        <div class="se-component se-placesMap se-l-default __se-component" id="SE-3b4dbb95-642e-4ec5-b89b-541d00871945">
+          <div class="se-component-content">
+            <div class="se-section se-section-placesMap  se-section-align-center se-l-default">
+              <div class="se-module se-module-map-image" style="padding-top: 45%;">
+                <div class="__se_map se-dynamic-map" tabindex="0"
+                  style="position: relative; overflow: hidden; background: rgb(248, 249, 250);">
+                  <div
+                    style="position: absolute; display: block; margin: 0px; padding: 0px; border: 0px; top: 0px; left: 0px; overflow: visible; width: 100%; height: 100%; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); z-index: 0; cursor: url(&quot;https://ssl.pstatic.net/static/maps/mantle/1x/openhand.cur&quot;), default;">
+                    <div
+                      style="position: absolute; display: block; margin: 0px; padding: 0px; border: 0px; top: 0px; left: 0px; overflow: visible; width: 100%; height: 100%; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); z-index: 0;">
+                      <div
+                        style="overflow: visible; width: 100%; height: 0px; position: absolute; display: block; margin: 0px; padding: 0px; border: 0px; top: 0px; left: 0px; z-index: 1;">
+                        <div
+                          style="overflow: visible; width: 100%; height: 0px; position: absolute; display: none; margin: 0px; padding: 0px; border: 0px; top: 0px; left: 0px; z-index: 0; user-select: none;">
+                        </div>
+                        <div
+                          style="overflow: visible; width: 100%; height: 0px; position: absolute; display: block; margin: 0px; padding: 0px; border: 0px; top: 0px; left: 0px; z-index: 1; user-select: none;">
+                          <div
+                            style="position: absolute; top: 0px; left: 0px; z-index: 0; margin: 0px; padding: 0px; border: 0px solid transparent; display: block; width: 0px; height: 0px; overflow: visible; box-sizing: content-box !important;">
+                            <div draggable="false" unselectable="on"
+                              style="position: absolute; top: -177px; left: 388px; z-index: 0; margin: 0px; padding: 0px; border: 0px solid transparent; user-select: none; -webkit-user-drag: none; box-sizing: content-box !important; opacity: 1; width: 256px; height: 256px;">
+                              <img draggable="false" unselectable="on" alt="" crossorigin="anonymous" width="256"
+                                height="256"
+                                src="https://map.pstatic.net/nrb/styles/basic/1791456229/17/111820/50827.png?mt=bg.ol.sw.ar.lko"
+                                style="margin: 0px; padding: 0px; border: 0px solid transparent; display: block; user-select: none; -webkit-user-drag: none; box-sizing: content-box !important; max-width: none !important; max-height: none !important; min-width: 0px !important; min-height: 0px !important; opacity: 1; position: absolute; left: 0px; top: 0px; z-index: 0; width: 256px; height: 256px;">
+                            </div>
+                            <div draggable="false" unselectable="on"
+                              style="position: absolute; top: 335px; left: 132px; z-index: 0; margin: 0px; padding: 0px; border: 0px solid transparent; user-select: none; -webkit-user-drag: none; box-sizing: content-box !important; opacity: 1; width: 256px; height: 256px;">
+                              <img draggable="false" unselectable="on" alt="" crossorigin="anonymous" width="256"
+                                height="256"
+                                src="https://map.pstatic.net/nrb/styles/basic/1791456229/17/111819/50829.png?mt=bg.ol.sw.ar.lko"
+                                style="margin: 0px; padding: 0px; border: 0px solid transparent; display: block; user-select: none; -webkit-user-drag: none; box-sizing: content-box !important; max-width: none !important; max-height: none !important; min-width: 0px !important; min-height: 0px !important; opacity: 1; position: absolute; left: 0px; top: 0px; z-index: 0; width: 256px; height: 256px;">
+                            </div>
+                            <div draggable="false" unselectable="on"
+                              style="position: absolute; top: 79px; left: 388px; z-index: 0; margin: 0px; padding: 0px; border: 0px solid transparent; user-select: none; -webkit-user-drag: none; box-sizing: content-box !important; opacity: 1; width: 256px; height: 256px;">
+                              <img draggable="false" unselectable="on" alt="" crossorigin="anonymous" width="256"
+                                height="256"
+                                src="https://map.pstatic.net/nrb/styles/basic/1791456229/17/111820/50828.png?mt=bg.ol.sw.ar.lko"
+                                style="margin: 0px; padding: 0px; border: 0px solid transparent; display: block; user-select: none; -webkit-user-drag: none; box-sizing: content-box !important; max-width: none !important; max-height: none !important; min-width: 0px !important; min-height: 0px !important; opacity: 1; position: absolute; left: 0px; top: 0px; z-index: 0; width: 256px; height: 256px;">
+                            </div>
+                            <div draggable="false" unselectable="on"
+                              style="position: absolute; top: 79px; left: 132px; z-index: 0; margin: 0px; padding: 0px; border: 0px solid transparent; user-select: none; -webkit-user-drag: none; box-sizing: content-box !important; opacity: 1; width: 256px; height: 256px;">
+                              <img draggable="false" unselectable="on" alt="" crossorigin="anonymous" width="256"
+                                height="256"
+                                src="https://map.pstatic.net/nrb/styles/basic/1791456229/17/111819/50828.png?mt=bg.ol.sw.ar.lko"
+                                style="margin: 0px; padding: 0px; border: 0px solid transparent; display: block; user-select: none; -webkit-user-drag: none; box-sizing: content-box !important; max-width: none !important; max-height: none !important; min-width: 0px !important; min-height: 0px !important; opacity: 1; position: absolute; left: 0px; top: 0px; z-index: 0; width: 256px; height: 256px;">
+                            </div>
+                            <div draggable="false" unselectable="on"
+                              style="position: absolute; top: 335px; left: 388px; z-index: 0; margin: 0px; padding: 0px; border: 0px solid transparent; user-select: none; -webkit-user-drag: none; box-sizing: content-box !important; opacity: 1; width: 256px; height: 256px;">
+                              <img draggable="false" unselectable="on" alt="" crossorigin="anonymous" width="256"
+                                height="256"
+                                src="https://map.pstatic.net/nrb/styles/basic/1791456229/17/111820/50829.png?mt=bg.ol.sw.ar.lko"
+                                style="margin: 0px; padding: 0px; border: 0px solid transparent; display: block; user-select: none; -webkit-user-drag: none; box-sizing: content-box !important; max-width: none !important; max-height: none !important; min-width: 0px !important; min-height: 0px !important; opacity: 1; position: absolute; left: 0px; top: 0px; z-index: 0; width: 256px; height: 256px;">
+                            </div>
+                            <div draggable="false" unselectable="on"
+                              style="position: absolute; top: -177px; left: 132px; z-index: 0; margin: 0px; padding: 0px; border: 0px solid transparent; user-select: none; -webkit-user-drag: none; box-sizing: content-box !important; opacity: 1; width: 256px; height: 256px;">
+                              <img draggable="false" unselectable="on" alt="" crossorigin="anonymous" width="256"
+                                height="256"
+                                src="https://map.pstatic.net/nrb/styles/basic/1791456229/17/111819/50827.png?mt=bg.ol.sw.ar.lko"
+                                style="margin: 0px; padding: 0px; border: 0px solid transparent; display: block; user-select: none; -webkit-user-drag: none; box-sizing: content-box !important; max-width: none !important; max-height: none !important; min-width: 0px !important; min-height: 0px !important; opacity: 1; position: absolute; left: 0px; top: 0px; z-index: 0; width: 256px; height: 256px;">
+                            </div>
+                            <div draggable="false" unselectable="on"
+                              style="position: absolute; top: -177px; left: 644px; z-index: 0; margin: 0px; padding: 0px; border: 0px solid transparent; user-select: none; -webkit-user-drag: none; box-sizing: content-box !important; opacity: 1; width: 256px; height: 256px;">
+                              <img draggable="false" unselectable="on" alt="" crossorigin="anonymous" width="256"
+                                height="256"
+                                src="https://map.pstatic.net/nrb/styles/basic/1791456229/17/111821/50827.png?mt=bg.ol.sw.ar.lko"
+                                style="margin: 0px; padding: 0px; border: 0px solid transparent; display: block; user-select: none; -webkit-user-drag: none; box-sizing: content-box !important; max-width: none !important; max-height: none !important; min-width: 0px !important; min-height: 0px !important; opacity: 1; position: absolute; left: 0px; top: 0px; z-index: 0; width: 256px; height: 256px;">
+                            </div>
+                            <div draggable="false" unselectable="on"
+                              style="position: absolute; top: 335px; left: -124px; z-index: 0; margin: 0px; padding: 0px; border: 0px solid transparent; user-select: none; -webkit-user-drag: none; box-sizing: content-box !important; opacity: 1; width: 256px; height: 256px;">
+                              <img draggable="false" unselectable="on" alt="" crossorigin="anonymous" width="256"
+                                height="256"
+                                src="https://map.pstatic.net/nrb/styles/basic/1791456229/17/111818/50829.png?mt=bg.ol.sw.ar.lko"
+                                style="margin: 0px; padding: 0px; border: 0px solid transparent; display: block; user-select: none; -webkit-user-drag: none; box-sizing: content-box !important; max-width: none !important; max-height: none !important; min-width: 0px !important; min-height: 0px !important; opacity: 1; position: absolute; left: 0px; top: 0px; z-index: 0; width: 256px; height: 256px;">
+                            </div>
+                            <div draggable="false" unselectable="on"
+                              style="position: absolute; top: 79px; left: 644px; z-index: 0; margin: 0px; padding: 0px; border: 0px solid transparent; user-select: none; -webkit-user-drag: none; box-sizing: content-box !important; opacity: 1; width: 256px; height: 256px;">
+                              <img draggable="false" unselectable="on" alt="" crossorigin="anonymous" width="256"
+                                height="256"
+                                src="https://map.pstatic.net/nrb/styles/basic/1791456229/17/111821/50828.png?mt=bg.ol.sw.ar.lko"
+                                style="margin: 0px; padding: 0px; border: 0px solid transparent; display: block; user-select: none; -webkit-user-drag: none; box-sizing: content-box !important; max-width: none !important; max-height: none !important; min-width: 0px !important; min-height: 0px !important; opacity: 1; position: absolute; left: 0px; top: 0px; z-index: 0; width: 256px; height: 256px;">
+                            </div>
+                            <div draggable="false" unselectable="on"
+                              style="position: absolute; top: 79px; left: -124px; z-index: 0; margin: 0px; padding: 0px; border: 0px solid transparent; user-select: none; -webkit-user-drag: none; box-sizing: content-box !important; opacity: 1; width: 256px; height: 256px;">
+                              <img draggable="false" unselectable="on" alt="" crossorigin="anonymous" width="256"
+                                height="256"
+                                src="https://map.pstatic.net/nrb/styles/basic/1791456229/17/111818/50828.png?mt=bg.ol.sw.ar.lko"
+                                style="margin: 0px; padding: 0px; border: 0px solid transparent; display: block; user-select: none; -webkit-user-drag: none; box-sizing: content-box !important; max-width: none !important; max-height: none !important; min-width: 0px !important; min-height: 0px !important; opacity: 1; position: absolute; left: 0px; top: 0px; z-index: 0; width: 256px; height: 256px;">
+                            </div>
+                            <div draggable="false" unselectable="on"
+                              style="position: absolute; top: 335px; left: 644px; z-index: 0; margin: 0px; padding: 0px; border: 0px solid transparent; user-select: none; -webkit-user-drag: none; box-sizing: content-box !important; opacity: 1; width: 256px; height: 256px;">
+                              <img draggable="false" unselectable="on" alt="" crossorigin="anonymous" width="256"
+                                height="256"
+                                src="https://map.pstatic.net/nrb/styles/basic/1791456229/17/111821/50829.png?mt=bg.ol.sw.ar.lko"
+                                style="margin: 0px; padding: 0px; border: 0px solid transparent; display: block; user-select: none; -webkit-user-drag: none; box-sizing: content-box !important; max-width: none !important; max-height: none !important; min-width: 0px !important; min-height: 0px !important; opacity: 1; position: absolute; left: 0px; top: 0px; z-index: 0; width: 256px; height: 256px;">
+                            </div>
+                            <div draggable="false" unselectable="on"
+                              style="position: absolute; top: -177px; left: -124px; z-index: 0; margin: 0px; padding: 0px; border: 0px solid transparent; user-select: none; -webkit-user-drag: none; box-sizing: content-box !important; opacity: 1; width: 256px; height: 256px;">
+                              <img draggable="false" unselectable="on" alt="" crossorigin="anonymous" width="256"
+                                height="256"
+                                src="https://map.pstatic.net/nrb/styles/basic/1791456229/17/111818/50827.png?mt=bg.ol.sw.ar.lko"
+                                style="margin: 0px; padding: 0px; border: 0px solid transparent; display: block; user-select: none; -webkit-user-drag: none; box-sizing: content-box !important; max-width: none !important; max-height: none !important; min-width: 0px !important; min-height: 0px !important; opacity: 1; position: absolute; left: 0px; top: 0px; z-index: 0; width: 256px; height: 256px;">
+                            </div>
+                            <div draggable="false" unselectable="on"
+                              style="position: absolute; top: -177px; left: 900px; z-index: 0; margin: 0px; padding: 0px; border: 0px solid transparent; user-select: none; -webkit-user-drag: none; box-sizing: content-box !important; opacity: 1; width: 256px; height: 256px;">
+                              <img draggable="false" unselectable="on" alt="" crossorigin="anonymous" width="256"
+                                height="256"
+                                src="https://map.pstatic.net/nrb/styles/basic/1791456229/17/111822/50827.png?mt=bg.ol.sw.ar.lko"
+                                style="margin: 0px; padding: 0px; border: 0px solid transparent; display: block; user-select: none; -webkit-user-drag: none; box-sizing: content-box !important; max-width: none !important; max-height: none !important; min-width: 0px !important; min-height: 0px !important; opacity: 1; position: absolute; left: 0px; top: 0px; z-index: 0; width: 256px; height: 256px;">
+                            </div>
+                            <div draggable="false" unselectable="on"
+                              style="position: absolute; top: 335px; left: -380px; z-index: 0; margin: 0px; padding: 0px; border: 0px solid transparent; user-select: none; -webkit-user-drag: none; box-sizing: content-box !important; opacity: 1; width: 256px; height: 256px;">
+                              <img draggable="false" unselectable="on" alt="" crossorigin="anonymous" width="256"
+                                height="256"
+                                src="https://map.pstatic.net/nrb/styles/basic/1791456229/17/111817/50829.png?mt=bg.ol.sw.ar.lko"
+                                style="margin: 0px; padding: 0px; border: 0px solid transparent; display: block; user-select: none; -webkit-user-drag: none; box-sizing: content-box !important; max-width: none !important; max-height: none !important; min-width: 0px !important; min-height: 0px !important; opacity: 1; position: absolute; left: 0px; top: 0px; z-index: 0; width: 256px; height: 256px;">
+                            </div>
+                            <div draggable="false" unselectable="on"
+                              style="position: absolute; top: 79px; left: 900px; z-index: 0; margin: 0px; padding: 0px; border: 0px solid transparent; user-select: none; -webkit-user-drag: none; box-sizing: content-box !important; opacity: 1; width: 256px; height: 256px;">
+                              <img draggable="false" unselectable="on" alt="" crossorigin="anonymous" width="256"
+                                height="256"
+                                src="https://map.pstatic.net/nrb/styles/basic/1791456229/17/111822/50828.png?mt=bg.ol.sw.ar.lko"
+                                style="margin: 0px; padding: 0px; border: 0px solid transparent; display: block; user-select: none; -webkit-user-drag: none; box-sizing: content-box !important; max-width: none !important; max-height: none !important; min-width: 0px !important; min-height: 0px !important; opacity: 1; position: absolute; left: 0px; top: 0px; z-index: 0; width: 256px; height: 256px;">
+                            </div>
+                            <div draggable="false" unselectable="on"
+                              style="position: absolute; top: 79px; left: -380px; z-index: 0; margin: 0px; padding: 0px; border: 0px solid transparent; user-select: none; -webkit-user-drag: none; box-sizing: content-box !important; opacity: 1; width: 256px; height: 256px;">
+                              <img draggable="false" unselectable="on" alt="" crossorigin="anonymous" width="256"
+                                height="256"
+                                src="https://map.pstatic.net/nrb/styles/basic/1791456229/17/111817/50828.png?mt=bg.ol.sw.ar.lko"
+                                style="margin: 0px; padding: 0px; border: 0px solid transparent; display: block; user-select: none; -webkit-user-drag: none; box-sizing: content-box !important; max-width: none !important; max-height: none !important; min-width: 0px !important; min-height: 0px !important; opacity: 1; position: absolute; left: 0px; top: 0px; z-index: 0; width: 256px; height: 256px;">
+                            </div>
+                            <div draggable="false" unselectable="on"
+                              style="position: absolute; top: 335px; left: 900px; z-index: 0; margin: 0px; padding: 0px; border: 0px solid transparent; user-select: none; -webkit-user-drag: none; box-sizing: content-box !important; opacity: 1; width: 256px; height: 256px;">
+                              <img draggable="false" unselectable="on" alt="" crossorigin="anonymous" width="256"
+                                height="256"
+                                src="https://map.pstatic.net/nrb/styles/basic/1791456229/17/111822/50829.png?mt=bg.ol.sw.ar.lko"
+                                style="margin: 0px; padding: 0px; border: 0px solid transparent; display: block; user-select: none; -webkit-user-drag: none; box-sizing: content-box !important; max-width: none !important; max-height: none !important; min-width: 0px !important; min-height: 0px !important; opacity: 1; position: absolute; left: 0px; top: 0px; z-index: 0; width: 256px; height: 256px;">
+                            </div>
+                            <div draggable="false" unselectable="on"
+                              style="position: absolute; top: -177px; left: -380px; z-index: 0; margin: 0px; padding: 0px; border: 0px solid transparent; user-select: none; -webkit-user-drag: none; box-sizing: content-box !important; opacity: 1; width: 256px; height: 256px;">
+                              <img draggable="false" unselectable="on" alt="" crossorigin="anonymous" width="256"
+                                height="256"
+                                src="https://map.pstatic.net/nrb/styles/basic/1791456229/17/111817/50827.png?mt=bg.ol.sw.ar.lko"
+                                style="margin: 0px; padding: 0px; border: 0px solid transparent; display: block; user-select: none; -webkit-user-drag: none; box-sizing: content-box !important; max-width: none !important; max-height: none !important; min-width: 0px !important; min-height: 0px !important; opacity: 1; position: absolute; left: 0px; top: 0px; z-index: 0; width: 256px; height: 256px;">
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          style="overflow: visible; width: 100%; height: 0px; position: absolute; display: block; margin: 0px; padding: 0px; border: 0px; top: 0px; left: 0px; z-index: 100;">
+                          <div
+                            style="overflow: visible; width: 100%; height: 0px; position: absolute; display: block; margin: 0px; padding: 0px; border: 0px; top: 0px; left: 0px; z-index: 101;">
+                          </div>
+                          <div
+                            style="overflow: visible; width: 100%; height: 0px; position: absolute; display: block; margin: 0px; padding: 0px; border: 0px; top: 0px; left: 0px; z-index: 103;">
+                            <div title=""
+                              style="position: absolute; overflow: hidden; box-sizing: content-box !important; cursor: inherit; left: 426px; top: 159px; width: 32px; height: 42px;">
+                              <img draggable="false" unselectable="on"
+                                src="https://editor-static.pstatic.net/c/resources/common/img/common-icon-places-marker-x2-20180920.png"
+                                alt=""
+                                style="margin: 0px; padding: 0px; border: 0px solid transparent; display: block; user-select: none; -webkit-user-drag: none; box-sizing: content-box !important; max-width: none !important; max-height: none !important; min-width: 0px !important; min-height: 0px !important; position: absolute; cursor: pointer; width: 32px; height: 42px; left: 0px; top: 0px;">
+                            </div>
+                          </div>
+                          <div
+                            style="overflow: visible; width: 100%; height: 0px; position: absolute; display: block; margin: 0px; padding: 0px; border: 0px; top: 0px; left: 0px; z-index: 106;">
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        style="position: absolute; display: none; margin: 0px; padding: 0px; border: 0px; top: 0px; left: 0px; overflow: visible; width: 100%; height: 100%; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); background-color: rgb(255, 255, 255); z-index: 10000; opacity: 0.5;">
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    style="position: absolute; z-index: 100; margin: 0px; padding: 0px; pointer-events: none; bottom: 0px; right: 0px;">
+                    <div
+                      style="border: 0px; margin: 0px; padding: 0px; pointer-events: none; float: right; height: 20px;">
+                      <div
+                        style="position: relative; width: 53px; height: 14px; margin: 0px 12px 6px 2px; overflow: hidden; pointer-events: auto;">
+                        <span
+                          style="display: block; margin: 0px; padding: 0px 4px; text-align: center; font-size: 10px; line-height: 11px; font-family: Helvetica, AppleSDGothicNeo-Light, nanumgothic, NanumGothic, 나눔고딕, Dotum, 돋움, sans-serif; font-weight: 700; color: rgb(34, 34, 37); text-shadow: rgba(255, 255, 255, 0.8) -1px 0px, rgba(255, 255, 255, 0.8) 0px 1px, rgba(255, 255, 255, 0.8) 1px 0px, rgba(255, 255, 255, 0.8) 0px -1px;">50m</span><img
+                          src="https://ssl.pstatic.net/static/maps/mantle/1x/new-scale-normal-b.png" width="47"
+                          height="3" alt=""
+                          style="position: absolute; left: 3px; bottom: 0px; z-index: 2; display: block; width: 47px; height: 3px; overflow: hidden; margin: 0px; padding: 0px; border: 0px; max-width: none !important; max-height: none !important; min-width: 0px !important; min-height: 0px !important;"><img
+                          src="https://ssl.pstatic.net/static/maps/mantle/1x/new-scale-normal-l.png" width="3"
+                          height="8" alt=""
+                          style="position:absolute;left:0;bottom:0;z-index:2;display:block;width:3px;height:8px;overflow:hidden;margin:0;padding:0;border:0 none;max-width:none !important;max-height:none !important;min-width:0 !important;min-height:0 !important;"><img
+                          src="https://ssl.pstatic.net/static/maps/mantle/1x/new-scale-normal-r.png" width="3"
+                          height="8" alt=""
+                          style="position:absolute;right:0;bottom:0;z-index:2;display:block;width:3px;height:8px;overflow:hidden;margin:0;padding:0;border:0 none;max-width:none !important;max-height:none !important;min-width:0 !important;min-height:0 !important;">
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    style="position: absolute; z-index: 100; margin: 0px; padding: 0px; pointer-events: none; bottom: 0px; left: 0px;">
+                    <div
+                      style="border: 0px; margin: 0px; padding: 0px; pointer-events: none; float: left; height: 21px;">
+                      <div class="map_copyright"
+                        style="margin: 0px; padding: 0px 0px 2px 10px; height: 19px; line-height: 19px; color: rgb(68, 68, 68); font-family: Helvetica, AppleSDGothicNeo-Light, nanumgothic, NanumGothic, 나눔고딕, Dotum, 돋움, sans-serif; font-size: 11px; clear: both; white-space: nowrap; pointer-events: none;">
+                        <div style="float: left;"><span style="white-space: pre; color: rgb(68, 68, 68);">© NAVER
+                            Corp.</span></div><a href="#"
+                          style="font-family: Helvetica, AppleSDGothicNeo-Light, nanumgothic, NanumGothic, 나눔고딕, Dotum, 돋움, sans-serif; font-size: 11px; line-height: 19px; margin: 0px 0px 0px 5px; padding: 0px; color: rgb(68, 68, 68); float: left; pointer-events: auto; text-decoration: underline; display: none;">더보기</a>
+                        <div style="float: left;"><a target="_blank" href="http://www.openstreetmap.org/copyright"
+                            style="pointer-events: auto; white-space: pre; display: none; color: rgb(68, 68, 68);">
+                            /OpenStreetMap</a></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    style="border: 1px solid rgb(41, 41, 48); background: rgb(255, 255, 255); padding: 15px; color: rgb(51, 51, 51); position: absolute; font-size: 11px; line-height: 1.5; clear: both; display: none; max-width: 350px !important; max-height: 300px !important;">
+                    <h5 style="font-size: 12px; margin-top: 0px; margin-bottom: 10px;">지도 데이터</h5><a href="#"
+                      style="position: absolute; top: 8px; right: 8px; width: 14px; height: 14px; font-size: 14px; line-height: 14px; display: block; overflow: hidden; color: rgb(68, 68, 68); text-decoration: none; font-weight: bold; text-align: center;">x</a>
+                    <div><span style="white-space: pre; color: rgb(68, 68, 68); float: left;">© NAVER Corp.</span><a
+                        target="_blank" href="http://www.openstreetmap.org/copyright"
+                        style="pointer-events: auto; white-space: pre; color: rgb(68, 68, 68); float: left; display: none;">
+                        /OpenStreetMap</a></div>
+                  </div>
+                  <div
+                    style="position: absolute; z-index: 100; margin: 0px; padding: 0px; pointer-events: none; top: 0px; right: 0px;">
+                    <div style="border: 0px; margin: 0px; padding: 0px; pointer-events: none; float: right;">
+                      <div style="position: relative; z-index: 3; pointer-events: auto;">
+                        <div
+                          style="position: relative; z-index: 0; width: 28px; margin: 10px; border: 1px solid rgb(68, 68, 68); box-sizing: content-box !important; user-select: none;">
+                          <a style="position: relative; z-index: 2; width: 28px; height: 28px; cursor: pointer; display: block; overflow: hidden; border-bottom: 0px; box-sizing: content-box !important;"
+                            href="#"><img src="https://ssl.pstatic.net/static/maps/mantle/1x/zoom-in-small-normal.png"
+                              width="28" height="28" alt="지도 확대"
+                              style="margin: 0px; padding: 0px; border: 0px solid transparent; display: block; width: 28px; height: 28px; box-sizing: content-box !important; max-width: none !important; max-height: none !important; min-width: 0px !important; min-height: 0px !important;"></a>
+                          <div
+                            style="position: relative; width: 28px; height: 216px; overflow: hidden; margin: 0px; padding: 7px 0px; background-color: rgb(255, 255, 255); cursor: pointer; box-sizing: content-box !important; display: none;">
+                            <div
+                              style="position: absolute; top: 7px; bottom: 7px; left: 12px; width: 4px; height: 216px; display: block; background-color: rgb(47, 135, 236);">
+                            </div>
+                            <div
+                              style="position: absolute; top: 7px; bottom: 7px; left: 12px; width: 4px; height: 44px; display: block; background-color: rgb(202, 205, 209);">
+                            </div><a
+                              style="position: absolute; left: 4px; width: 18px; height: 10px; top: 44px; border: 1px solid rgb(68, 68, 68); cursor: move; display: block; overflow: hidden; box-sizing: content-box !important;"
+                              href="#"><img src="https://ssl.pstatic.net/static/maps/mantle/1x/zoom-handle.png"
+                                width="18" height="10" alt="지도 확대/축소 슬라이더"
+                                style="margin:0;padding:0;border:solid 0 transparent;display:block;box-sizing:content-box !important;max-width:none !important;max-height:none !important;min-width:0 !important;min-height:0 !important;width:18px;height:10px;"></a>
+                          </div><a
+                            style="position: relative; z-index: 2; width: 28px; height: 28px; cursor: pointer; display: block; overflow: hidden; border-top: 1px solid rgb(202, 205, 209); box-sizing: content-box !important;"
+                            href="#"><img src="https://ssl.pstatic.net/static/maps/mantle/1x/zoom-out-small-normal.png"
+                              width="28" height="28" alt="지도 축소"
+                              style="margin: 0px; padding: 0px; border: 0px solid transparent; display: block; width: 28px; height: 28px; box-sizing: content-box !important; max-width: none !important; max-height: none !important; min-width: 0px !important; min-height: 0px !important;"></a>
+                          <div
+                            style="position: absolute; top: 22px; width: 44px; height: 0px; overflow: visible; display: none; left: -51px;">
+                            <div style="display: block; margin: 0px; padding: 0px;">
+                              <h4 style="visibility:hidden;width:0;height:0;overflow:hidden;margin:0;padding:0;">지도 컨트롤러
+                                범례</h4>
+                              <div
+                                style="position: absolute; top: 43px; left: 0px; z-index: 0; margin: 0px; padding: 0px; border: 0px solid transparent; display: block; width: 44px; height: 17px; overflow: hidden; box-sizing: content-box !important; visibility: visible;">
+                                <img src="https://ssl.pstatic.net/static/maps/mantle/1x/zoom-legend-left-on.png" alt=""
+                                  style="position: absolute; top: 0px; left: 0px; z-index: 0; margin: 0px; padding: 0px; border: 0px solid transparent; display: block; width: 44px; height: 17px; box-sizing: content-box !important; max-width: none !important; max-height: none !important; min-width: 0px !important; min-height: 0px !important;"><span
+                                  style="margin: 0px; border: 0px solid transparent; display: block; font-family: Helvetica, AppleSDGothicNeo-Light, nanumgothic, NanumGothic, 나눔고딕, Dotum, 돋움, sans-serif; position: relative; z-index: 2; line-height: 17px; color: rgb(255, 255, 255); font-size: 11px; padding: 0px 4px 0px 0px; text-align: center; letter-spacing: -1px; box-sizing: content-box !important;">부동산</span>
+                              </div>
+                              <div
+                                style="position: absolute; top: 63px; left: 0px; z-index: 0; margin: 0px; padding: 0px; border: 0px solid transparent; display: block; width: 44px; height: 17px; overflow: hidden; box-sizing: content-box !important; visibility: visible;">
+                                <img src="https://ssl.pstatic.net/static/maps/mantle/1x/zoom-legend-left-normal.png"
+                                  alt=""
+                                  style="position: absolute; top: 0px; left: 0px; z-index: 0; margin: 0px; padding: 0px; border: 0px solid transparent; display: block; width: 44px; height: 17px; box-sizing: content-box !important; max-width: none !important; max-height: none !important; min-width: 0px !important; min-height: 0px !important;"><span
+                                  style="margin: 0px; border: 0px solid transparent; display: block; font-family: Helvetica, AppleSDGothicNeo-Light, nanumgothic, NanumGothic, 나눔고딕, Dotum, 돋움, sans-serif; position: relative; z-index: 2; line-height: 17px; color: rgb(255, 255, 255); font-size: 11px; padding: 0px 4px 0px 0px; text-align: center; letter-spacing: -1px; box-sizing: content-box !important;">거리</span>
+                              </div>
+                              <div
+                                style="position: absolute; top: 83px; left: 0px; z-index: 0; margin: 0px; padding: 0px; border: 0px solid transparent; display: block; width: 44px; height: 17px; overflow: hidden; box-sizing: content-box !important; visibility: visible;">
+                                <img src="https://ssl.pstatic.net/static/maps/mantle/1x/zoom-legend-left-normal.png"
+                                  alt=""
+                                  style="position: absolute; top: 0px; left: 0px; z-index: 0; margin: 0px; padding: 0px; border: 0px solid transparent; display: block; width: 44px; height: 17px; box-sizing: content-box !important; max-width: none !important; max-height: none !important; min-width: 0px !important; min-height: 0px !important;"><span
+                                  style="margin: 0px; border: 0px solid transparent; display: block; font-family: Helvetica, AppleSDGothicNeo-Light, nanumgothic, NanumGothic, 나눔고딕, Dotum, 돋움, sans-serif; position: relative; z-index: 2; line-height: 17px; color: rgb(255, 255, 255); font-size: 11px; padding: 0px 4px 0px 0px; text-align: center; letter-spacing: -1px; box-sizing: content-box !important;">읍,면,동</span>
+                              </div>
+                              <div
+                                style="position: absolute; top: 113px; left: 0px; z-index: 0; margin: 0px; padding: 0px; border: 0px solid transparent; display: block; width: 44px; height: 17px; overflow: hidden; box-sizing: content-box !important; visibility: visible;">
+                                <img src="https://ssl.pstatic.net/static/maps/mantle/1x/zoom-legend-left-normal.png"
+                                  alt=""
+                                  style="position: absolute; top: 0px; left: 0px; z-index: 0; margin: 0px; padding: 0px; border: 0px solid transparent; display: block; width: 44px; height: 17px; box-sizing: content-box !important; max-width: none !important; max-height: none !important; min-width: 0px !important; min-height: 0px !important;"><span
+                                  style="margin: 0px; border: 0px solid transparent; display: block; font-family: Helvetica, AppleSDGothicNeo-Light, nanumgothic, NanumGothic, 나눔고딕, Dotum, 돋움, sans-serif; position: relative; z-index: 2; line-height: 17px; color: rgb(255, 255, 255); font-size: 11px; padding: 0px 4px 0px 0px; text-align: center; letter-spacing: -1px; box-sizing: content-box !important;">시,군,구</span>
+                              </div>
+                              <div
+                                style="position: absolute; top: 143px; left: 0px; z-index: 0; margin: 0px; padding: 0px; border: 0px solid transparent; display: block; width: 44px; height: 17px; overflow: hidden; box-sizing: content-box !important; visibility: visible;">
+                                <img src="https://ssl.pstatic.net/static/maps/mantle/1x/zoom-legend-left-normal.png"
+                                  alt=""
+                                  style="position: absolute; top: 0px; left: 0px; z-index: 0; margin: 0px; padding: 0px; border: 0px solid transparent; display: block; width: 44px; height: 17px; box-sizing: content-box !important; max-width: none !important; max-height: none !important; min-width: 0px !important; min-height: 0px !important;"><span
+                                  style="margin: 0px; border: 0px solid transparent; display: block; font-family: Helvetica, AppleSDGothicNeo-Light, nanumgothic, NanumGothic, 나눔고딕, Dotum, 돋움, sans-serif; position: relative; z-index: 2; line-height: 17px; color: rgb(255, 255, 255); font-size: 11px; padding: 0px 4px 0px 0px; text-align: center; letter-spacing: -1px; box-sizing: content-box !important;">시,도</span>
+                              </div>
+                              <div
+                                style="position: absolute; top: 163px; left: 0px; z-index: 0; margin: 0px; padding: 0px; border: 0px solid transparent; display: block; width: 44px; height: 17px; overflow: hidden; box-sizing: content-box !important; visibility: visible;">
+                                <img src="https://ssl.pstatic.net/static/maps/mantle/1x/zoom-legend-left-normal.png"
+                                  alt=""
+                                  style="position: absolute; top: 0px; left: 0px; z-index: 0; margin: 0px; padding: 0px; border: 0px solid transparent; display: block; width: 44px; height: 17px; box-sizing: content-box !important; max-width: none !important; max-height: none !important; min-width: 0px !important; min-height: 0px !important;"><span
+                                  style="margin: 0px; border: 0px solid transparent; display: block; font-family: Helvetica, AppleSDGothicNeo-Light, nanumgothic, NanumGothic, 나눔고딕, Dotum, 돋움, sans-serif; position: relative; z-index: 2; line-height: 17px; color: rgb(255, 255, 255); font-size: 11px; padding: 0px 4px 0px 0px; text-align: center; letter-spacing: -1px; box-sizing: content-box !important;">국가</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <img
+                  src="https://simg.pstatic.net/static.map/v2/map/staticmap.bin?caller=smarteditor&amp;markers=color%3A0x11cc73%7Ctype%3Ad%7CviewSizeRatio%3A0.7%7Cpos%3A127.1233882%2037.4127712%7Csize%3Amid&amp;w=700&amp;h=315&amp;scale=2&amp;dataversion=179.29"
+                  alt="" class="se-map-image egjs-visible" style="display: none;">
+              </div>
+              <div class="se-module se-module-map-text ">
+                <a href="#" target="_blank" class="se-map-info __se_link" onclick="return false;" data-linktype="map"
+                  data-linkdata="{&quot;eventTarget&quot; : &quot;placeDesc&quot;, &quot;placeId&quot; : &quot;1781336022&quot;, &quot;searchEngine&quot; : &quot;naver&quot;, &quot;searchType&quot; : &quot;s&quot;, &quot;name&quot; : &quot;더 바실리움&quot;, &quot;address&quot; : &quot;경기도 성남시 분당구 양현로 322 1층&quot;, &quot;latitude&quot; : &quot;37.4127712&quot;, &quot;longitude&quot; : &quot;127.1233882&quot;, &quot;tel&quot; : &quot;031-788-7070&quot;, &quot;bookingUrl&quot; : null }">
+                  <strong class="se-map-title">더 바실리움</strong>
+                  <p class="se-map-address">경기도 성남시 분당구 양현로 322 1층</p>
+                </a>
+              </div>
+
+            </div>
+          </div>
+          <script type="text/data" class="__se_module_data"
+            data-module="{&quot;type&quot;:&quot;v2_map&quot;, &quot;id&quot; :&quot;SE-3b4dbb95-642e-4ec5-b89b-541d00871945&quot;, &quot;data&quot; : { &quot;layout&quot;: &quot;default&quot;, &quot;searchEngine&quot; : &quot;naver&quot;, &quot;places&quot; : [{&quot;placeId&quot;:&quot;1781336022&quot;,&quot;name&quot;:&quot;더 바실리움&quot;,&quot;address&quot;:&quot;경기도 성남시 분당구 양현로 322 1층&quot;,&quot;latlng&quot;:{&quot;@ctype&quot;:&quot;position&quot;,&quot;latitude&quot;:37.4127712,&quot;longitude&quot;:127.1233882},&quot;searchType&quot;:&quot;s&quot;,&quot;tel&quot;:&quot;031-788-7070&quot;,&quot;bookingUrl&quot;:null}] }}"
+            data-module-v2="{&quot;type&quot;:&quot;v2_map&quot;, &quot;id&quot; :&quot;SE-3b4dbb95-642e-4ec5-b89b-541d00871945&quot;, &quot;data&quot; : { &quot;layout&quot;: &quot;default&quot;, &quot;searchEngine&quot; : &quot;naver&quot;, &quot;places&quot; : [{&quot;placeId&quot;:&quot;1781336022&quot;,&quot;name&quot;:&quot;더 바실리움&quot;,&quot;address&quot;:&quot;경기도 성남시 분당구 양현로 322 1층&quot;,&quot;latlng&quot;:{&quot;@ctype&quot;:&quot;position&quot;,&quot;latitude&quot;:37.4127712,&quot;longitude&quot;:127.1233882},&quot;searchType&quot;:&quot;s&quot;,&quot;tel&quot;:&quot;031-788-7070&quot;,&quot;bookingUrl&quot;:null}] }}"></script>
+        </div>
+
+        <!-- * 카카오맵 - 지도퍼가기 -->
+        <!-- 1. 지도 노드 -->
+        <div id="daumRoughmapContainer1791948268322" class="root_daum_roughmap root_daum_roughmap_landing"
+          style="width: 100%;"></div>
+
+        <!--
+	2. 설치 스크립트
+	* 지도 퍼가기 서비스를 2개 이상 넣을 경우, 설치 스크립트는 하나만 삽입합니다.
+-->
+        <script charset="UTF-8" class="daum_roughmap_loader_script"
+          src="https://t1.kakaocdn.net/kakaomapweb/roughmap/loader/prod/roughmapLoader.js"></script>
+
+        <!-- 3. 실행 스크립트 -->
+        <script charset="UTF-8">
+          new daum.roughmap.Lander({
+            "timestamp": "1791948268322",
+            "key": "39a8jjuyv2j",
+            "mapWidth": "100%",
+            "mapHeight": "360"
+          }).render();
+        </script>
+        <style>
+          .root_daum_roughmap .wrap_controllers,
+          .root_daum_roughmap .wrap_controllers *,
+          .root_daum_roughmap .cont,
+          .root_daum_roughmap .cont *,
+          #daumRoughmapContainer1791948268322 .wrap_controllers,
+          #daumRoughmapContainer1791948268322 .cont {
+            display: none !important;
+          }
+        </style>
+
+        <div class="map-actions">
+          <a class="button map-btn" href="https://map.kakao.com/link/search/더%20바실리움" target="_blank"
+            rel="noopener">카카오맵</a>
+          <a class="button map-btn" href="https://map.naver.com/p/search/더%20바실리움" target="_blank" rel="noopener">네이버
+            지도</a>
+          <a class="button map-btn" href="https://tmap.life/e7077190" target="_blank" rel="noopener">티맵</a>
+        </div>
+
+        <div class="transport-box">
+          <div class="transport-item">
+            <span class="transport-badge">지하철</span>
+            <p><strong>수인분당선 야탑역</strong> 4번 출구 (도보 약 5분)</p>
+          </div>
+          <div class="transport-item">
+            <span class="transport-badge">버스</span>
+            <p><strong>야탑역·성남종합버스터미널</strong> 정류장 하차</p>
+          </div>
+          <div class="transport-item">
+            <span class="transport-badge">자가용/주차</span>
+            <p>코리아디자인센터 <strong>지하 주차장 2시간 무료</strong><br><small class="muted-text">※ 내비게이션에 '코리아디자인센터' 또는 '더 바실리움'
+                검색</small></p>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========================================
+           6. 마음 전하실 곳 (ACCOUNT)
+      ========================================== -->
+      <section class="section account-section reveal" id="account">
+        <p class="section-kicker">ACCOUNT</p>
+        <h2 class="section-title">마음 전하실 곳</h2>
+        <p class="account-description">
+          참석이 어려우신 분들을 위해<br>
+          축하의 마음을 전하실 수 있는 계좌번호를 안내해 드립니다.
+        </p>
+
+        <!-- 신랑측 계좌 -->
+        <div class="account-group">
+          <button type="button" class="account-toggle" aria-expanded="false">
+            <span>신랑측 계좌번호</span>
+            <span class="chevron" aria-hidden="true">▾</span>
+          </button>
+          <div class="account-content">
+            <div class="account-row">
+              <div class="account-info">
+                <span class="account-holder">신랑 문현준</span>
+                <strong class="account-num">국민은행 123456-01-123456</strong>
+              </div>
+              <button type="button" class="copy-btn" data-account="국민은행 123456-01-123456">복사</button>
+            </div>
+            <div class="account-row">
+              <div class="account-info">
+                <span class="account-holder">혼주(부) 문영태</span>
+                <strong class="account-num">농협 302-0000-1234-56</strong>
+              </div>
+              <button type="button" class="copy-btn" data-account="농협 302-0000-1234-56">복사</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 신부측 계좌 -->
+        <div class="account-group">
+          <button type="button" class="account-toggle" aria-expanded="false">
+            <span>신부측 계좌번호</span>
+            <span class="chevron" aria-hidden="true">▾</span>
+          </button>
+          <div class="account-content">
+            <div class="account-row">
+              <div class="account-info">
+                <span class="account-holder">신부 조민아</span>
+                <strong class="account-num">신한은행 110-123-456789</strong>
+              </div>
+              <button type="button" class="copy-btn" data-account="신한은행 110-123-456789">복사</button>
+            </div>
+            <div class="account-row">
+              <div class="account-info">
+                <span class="account-holder">혼주(부) 조영식</span>
+                <strong class="account-num">우리은행 1002-000-123456</strong>
+              </div>
+              <button type="button" class="copy-btn" data-account="우리은행 1002-000-123456">복사</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========================================
+           7. 하단 (SHARE & FOOTER)
+      ========================================== -->
+      <section class="section share-section reveal" id="share-section">
+        <p class="section-kicker">SHARE</p>
+        <h2 class="section-title">소중한 분들과<br>함께해 주세요</h2>
+        <p class="share-desc">새로운 시작을 함께 축복해 주셔서 진심으로 감사드립니다.</p>
+        <div class="share-actions">
+          <button class="share-main-btn" id="share" type="button">
+            청첩장 공유하기 ↗
+          </button>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <div class="footer-mark" aria-hidden="true">HYUNJUN <span>♥</span> MINA</div>
+        <p class="footer-date">2027. 02. 27 SATURDAY</p>
+        <p class="footer-msg">감사한 마음으로 소중하게 살아가겠습니다.</p>
+        <small>© 2027 Hyunjun &amp; Mina. All rights reserved.</small>
+      </footer>
+    </div>
+
+    <!-- 이미지 확대 모달 (라이트박스) -->
+    <div class="modal" id="imageModal" aria-hidden="true" role="dialog" aria-label="웨딩 사진 확대 보기">
+      <button type="button" class="modal-close" id="modalClose" aria-label="모달 닫기">×</button>
+      <button type="button" class="modal-nav modal-prev" id="modalPrev" aria-label="이전 사진 보기">‹</button>
+      <div class="modal-dialog">
+        <img src="" alt="확대된 웨딩 사진" id="modalImage">
+        <div class="modal-counter" id="modalCounter">1 / 20</div>
+      </div>
+      <button type="button" class="modal-nav modal-next" id="modalNext" aria-label="다음 사진 보기">›</button>
+    </div>
+
+    <!-- 토스트 알림 -->
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  </div>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
