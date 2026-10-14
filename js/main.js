@@ -498,6 +498,7 @@
 
   /* ── 6. D-Day Calculator ── */
   const ddayCountEl = document.getElementById('ddayCount');
+  const ddaySentenceEl = document.getElementById('ddaySentence');
   if (ddayCountEl) {
     const weddingDate = new Date('2027-02-27T11:00:00+09:00');
     const now = new Date();
@@ -506,36 +507,59 @@
     const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
 
     if (diffDays > 0) {
-      ddayCountEl.textContent = `D-${diffDays}`;
+      ddayCountEl.textContent = `${diffDays}일`;
     } else if (diffDays === 0) {
-      ddayCountEl.textContent = 'D-DAY';
+      if (ddaySentenceEl) {
+        ddaySentenceEl.innerHTML = '현준 ♥ 민아의 결혼식이 <strong class="dday-highlight" id="ddayCount">오늘</strong>입니다.';
+      } else {
+        ddayCountEl.textContent = '오늘';
+      }
     } else {
-      ddayCountEl.textContent = `D+${Math.abs(diffDays)}`;
+      if (ddaySentenceEl) {
+        ddaySentenceEl.innerHTML = `현준 ♥ 민아의 결혼식으로부터 <strong class="dday-highlight" id="ddayCount">${Math.abs(diffDays)}일</strong> 지났습니다.`;
+      } else {
+        ddayCountEl.textContent = `${Math.abs(diffDays)}일`;
+      }
     }
   }
 
-  /* ── 7. Share Invitation ── */
-  const shareBtn = document.getElementById('share');
-  if (shareBtn) {
-    shareBtn.addEventListener('click', async () => {
-      const shareData = {
-        title: '현준 그리고 민아, 결혼합니다',
-        text: '2027년 2월 27일 토요일 오전 11시 · 더 바실리움\n소중한 분들을 초대합니다.',
-        url: window.location.href
-      };
+  /* ── 7. Share Invitation (카카오톡 공유 & 링크 복사) ── */
+  const shareKakaoBtn = document.getElementById('shareKakao');
+  const shareLinkBtn = document.getElementById('shareLink');
+  const legacyShareBtn = document.getElementById('share');
 
-      if (navigator.share && /Android|iPhone|iPad|iPod/i.test(navigator.userAgent)) {
-        try {
-          await navigator.share(shareData);
-        } catch (error) {
-          if (error.name !== 'AbortError') {
-            copyText(window.location.href, '청첩장 링크가 복사되었습니다.');
-          }
+  async function handleShare() {
+    const shareData = {
+      title: '현준 그리고 민아, 결혼합니다',
+      text: '2027년 2월 27일 토요일 오전 11시 · 더 바실리움\n소중한 분들을 초대합니다.',
+      url: window.location.href
+    };
+
+    if (navigator.share && /Android|iPhone|iPad|iPod/i.test(navigator.userAgent)) {
+      try {
+        await navigator.share(shareData);
+      } catch (error) {
+        if (error.name !== 'AbortError') {
+          copyText(window.location.href, '청첩장 링크가 복사되었습니다.');
         }
-      } else {
-        copyText(window.location.href, '청첩장 링크가 복사되었습니다.');
       }
+    } else {
+      copyText(window.location.href, '청첩장 링크가 복사되었습니다.');
+    }
+  }
+
+  if (shareKakaoBtn) {
+    shareKakaoBtn.addEventListener('click', handleShare);
+  }
+
+  if (shareLinkBtn) {
+    shareLinkBtn.addEventListener('click', () => {
+      copyText(window.location.href, '청첩장 링크가 복사되었습니다.');
     });
+  }
+
+  if (legacyShareBtn) {
+    legacyShareBtn.addEventListener('click', handleShare);
   }
 
   /* ── 8. Scroll Reveal (wedding-main IntersectionObserver) ── */

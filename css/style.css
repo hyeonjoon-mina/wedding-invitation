@@ -349,14 +349,31 @@ button {
 }
 
 .calendar .wedding-day {
-  width: 28px;
-  height: 28px;
+  position: relative;
+  width: 32px;
+  height: 30px;
   margin: auto;
-  border-radius: 50%;
-  background: var(--rose);
   color: #ffffff !important;
-  font-weight: 500;
-  box-shadow: 0 2px 6px rgba(181, 122, 116, 0.4);
+  font-weight: 600;
+  font-size: 11.5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 1px;
+  z-index: 1;
+}
+
+.calendar .wedding-day::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 30px;
+  height: 28px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23b57a74'%3E%3Cpath d='M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z'/%3E%3C/svg%3E") center / contain no-repeat;
+  filter: drop-shadow(0 2px 4px rgba(181, 122, 116, 0.45));
+  z-index: -1;
 }
 
 .date-divider {
@@ -375,26 +392,27 @@ button {
 
 .dday-box {
   margin: 16px auto 20px;
-  padding: 12px 18px;
+  padding: 12px 20px;
   background: #f7f3ec;
   border-radius: 20px;
   display: inline-flex;
-  flex-direction: column;
   align-items: center;
-  gap: 3px;
+  justify-content: center;
 }
 
-.dday-sub {
-  font-size: 11px;
-  color: var(--muted);
+.dday-sentence {
+  font-size: 13px;
+  color: var(--ink-light);
+  margin: 0;
+  line-height: 1.4;
+  letter-spacing: -0.01em;
 }
 
-.dday-count {
-  font-family: 'Playfair Display', serif;
-  font-size: 20px;
-  letter-spacing: 0.06em;
+.dday-highlight {
   color: var(--rose);
   font-weight: 600;
+  font-size: 15px;
+  margin: 0 2px;
 }
 
 .text-link {
@@ -546,17 +564,58 @@ button {
   margin: 0 0 16px;
 }
 
-.address {
-  font-size: 13px;
-  line-height: 1.85;
-  color: var(--ink-light);
+.address-box {
   margin: 0 0 10px;
+}
+
+.address-main {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.address-text {
+  font-size: 13.5px;
+  font-weight: 400;
+  color: var(--ink);
+  line-height: 1.5;
+}
+
+.address-copy-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  color: var(--rose);
+  padding: 3px 9px;
+  border: 1px solid rgba(181, 122, 116, 0.45);
+  border-radius: 12px;
+  background: #ffffff;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  cursor: pointer;
+  line-height: 1.2;
+}
+
+.address-copy-btn:hover {
+  background: var(--rose);
+  color: #ffffff;
+  border-color: var(--rose);
+}
+
+.address-sub {
+  font-size: 12px;
+  color: var(--muted);
+  margin: 4px 0 0;
+  line-height: 1.4;
 }
 
 .venue-tel {
   font-size: 12px;
   color: var(--muted);
-  margin: 0;
+  margin: 10px 0 24px;
 }
 
 .button {
@@ -568,18 +627,6 @@ button {
   border-radius: 4px;
   font-size: 12px;
   transition: all 0.2s ease;
-}
-
-.button-outline {
-  border: 1px solid var(--rose);
-  color: var(--rose);
-  background: transparent;
-  margin-bottom: 22px;
-}
-
-.button-outline:hover {
-  background: var(--rose);
-  color: #ffffff;
 }
 
 /* 카카오 약도(roughmap) 컨트롤러 및 하단 정보 숨김 */
@@ -608,22 +655,40 @@ button {
   justify-content: center;
   gap: 8px;
   max-width: 380px;
-  margin: 0 auto 36px;
+  margin: 10px auto 36px;
 }
 
 .map-btn {
   flex: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
   background: #ffffff;
   border: 1px solid var(--line);
   color: #5d5349;
   font-size: 11.5px;
-  padding: 12px 8px;
+  padding: 10px 6px;
   box-shadow: var(--shadow-sm);
+  border-radius: 4px;
+  white-space: nowrap;
+  transition: all 0.2s ease;
 }
 
 .map-btn:hover {
   border-color: #cbbeaf;
   color: var(--ink);
+  transform: translateY(-1px);
+  box-shadow: 0 3px 10px rgba(60, 48, 36, 0.08);
+}
+
+.map-btn-icon {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  display: block;
+  border-radius: 4px;
+  object-fit: contain;
 }
 
 .transport-box {
@@ -638,7 +703,7 @@ button {
   display: flex;
   align-items: flex-start;
   gap: 14px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   line-height: 1.7;
 }
 
@@ -793,7 +858,7 @@ button {
    7. SHARE & FOOTER (하단)
 ========================================= */
 .share-section {
-  background: #f3ece3;
+  background: #ffffff;
   padding-bottom: 70px;
 }
 
@@ -804,26 +869,59 @@ button {
 }
 
 .share-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
   max-width: 320px;
   margin: 0 auto;
 }
 
-.share-main-btn {
+.share-btn {
   width: 100%;
-  padding: 16px 24px;
-  background: #463e36;
-  color: #ffffff;
-  font-size: 13px;
-  font-weight: 400;
-  border-radius: 4px;
-  letter-spacing: 0.04em;
-  box-shadow: 0 4px 15px rgba(60, 48, 36, 0.15);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 14px 20px;
+  font-size: 13.5px;
+  font-weight: 500;
+  border-radius: 6px;
+  cursor: pointer;
+  border: none;
   transition: all 0.25s ease;
+  box-shadow: 0 2px 10px rgba(60, 48, 36, 0.08);
 }
 
-.share-main-btn:hover {
-  background: #362f28;
+/* 카카오톡 공유 (카톡 고유 바탕색) */
+.share-btn-kakao {
+  background: #FEE500;
+  color: #191919;
+}
+
+.share-btn-kakao:hover {
+  background: #fada0a;
   transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(254, 229, 0, 0.4);
+}
+
+/* 링크 복사하기 */
+.share-btn-link {
+  background: #111111;
+  border: 1px solid #111111;
+  color: #ffffff;
+}
+
+.share-btn-link:hover {
+  background: #252525;
+  border-color: #252525;
+  color: #ffffff;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+}
+
+.share-btn-icon {
+  flex-shrink: 0;
+  display: block;
 }
 
 .footer {
@@ -984,9 +1082,11 @@ button {
     font-size: 30px;
     background: rgba(35, 28, 24, 0.35);
   }
+
   .modal-prev {
     left: 6px;
   }
+
   .modal-next {
     right: 6px;
   }
