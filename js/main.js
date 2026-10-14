@@ -531,7 +531,6 @@
   async function handleShare() {
     const shareData = {
       title: '현준 그리고 민아, 결혼합니다',
-      text: '2027년 2월 27일 토요일 오전 11시 · 더 바실리움\n소중한 분들을 초대합니다.',
       url: window.location.href
     };
 
