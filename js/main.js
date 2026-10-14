@@ -603,4 +603,40 @@
     const roughmapObserver = new MutationObserver(hideKakaoControls);
     roughmapObserver.observe(kakaoContainer, { childList: true, subtree: true });
   }
+
+  /* ── 10. Contact Modal (축하 연락하기 모달) ── */
+  const contactModal = document.getElementById('contactModal');
+  const contactModalOpenBtn = document.getElementById('contactModalOpenBtn');
+  const contactModalClose = document.getElementById('contactModalClose');
+  const contactModalBackdrop = document.getElementById('contactModalBackdrop');
+
+  function openContactModal() {
+    if (!contactModal) return;
+    contactModal.classList.add('active');
+    contactModal.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeContactModal() {
+    if (!contactModal) return;
+    contactModal.classList.remove('active');
+    contactModal.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+  }
+
+  if (contactModalOpenBtn) {
+    contactModalOpenBtn.addEventListener('click', openContactModal);
+  }
+  if (contactModalClose) {
+    contactModalClose.addEventListener('click', closeContactModal);
+  }
+  if (contactModalBackdrop) {
+    contactModalBackdrop.addEventListener('click', closeContactModal);
+  }
+
+  window.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && contactModal && contactModal.classList.contains('active')) {
+      closeContactModal();
+    }
+  });
 })();

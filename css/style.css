@@ -63,9 +63,7 @@ button {
   min-height: 100svh;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 80px 24px 90px;
+  padding: 0;
   text-align: center;
   background: #2a2420 url('../images/photo01.jpg') center center / cover no-repeat;
   color: #ffffff;
@@ -76,9 +74,10 @@ button {
   position: absolute;
   inset: 0;
   background: linear-gradient(180deg,
-      rgba(25, 20, 16, 0.38) 0%,
-      rgba(32, 26, 22, 0.55) 55%,
-      rgba(22, 18, 15, 0.75) 100%);
+      rgba(20, 16, 12, 0.5) 0%,
+      rgba(25, 20, 16, 0.15) 30%,
+      rgba(25, 20, 16, 0.15) 60%,
+      rgba(20, 16, 12, 0.72) 100%);
   z-index: 1;
 }
 
@@ -95,7 +94,20 @@ button {
 }
 
 .hero__content {
+  position: relative;
   z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  height: 100svh;
+  padding: 56px 20px 28px;
+  box-sizing: border-box;
+}
+
+.hero__top {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -107,8 +119,8 @@ button {
   font-size: 11px;
   letter-spacing: 0.32em;
   color: #eedacf;
-  margin: 0 0 16px;
-  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+  margin: 0 0 12px;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
 }
 
 .ornament {
@@ -116,11 +128,11 @@ button {
   align-items: center;
   gap: 12px;
   color: #e4cbb9;
-  margin-bottom: 24px;
+  margin-bottom: 16px;
 }
 
 .ornament span {
-  width: 30px;
+  width: 28px;
   height: 1px;
   background: rgba(238, 218, 207, 0.65);
 }
@@ -132,61 +144,70 @@ button {
 
 .hero__title {
   font-family: 'Gowun Batang', serif;
-  font-size: clamp(28px, 7.5vw, 36px);
+  font-size: clamp(22px, 6vw, 30px);
   font-weight: 400;
-  line-height: 1.5;
-  letter-spacing: -0.04em;
-  margin: 0 0 16px;
-  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  line-height: 1.35;
+  letter-spacing: -0.02em;
+  margin: 0;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.65);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  white-space: nowrap;
 }
 
 .hero__title em {
-  display: block;
-  font-size: 14px;
+  display: inline-block;
+  font-size: 13.5px;
   font-style: normal;
   font-family: 'Playfair Display', 'Gowun Batang', serif;
-  letter-spacing: 0.16em;
+  letter-spacing: 0.12em;
   color: #f7dcd5;
-  margin: 4px 0;
+  margin: 0 2px;
+  font-weight: 300;
+  opacity: 0.9;
 }
 
-.hero__subtitle {
-  font-family: 'Gowun Batang', serif;
-  font-size: 14px;
-  line-height: 1.9;
-  margin: 18px 0 32px;
-  color: rgba(255, 255, 255, 0.9);
-  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.4);
+.hero__bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-top: auto;
 }
 
 .hero__date {
   font-family: 'Playfair Display', 'Noto Sans KR', serif;
-  font-size: 14px;
+  font-size: 14.5px;
   letter-spacing: 0.08em;
-  margin: 0 0 8px;
+  margin: 0 0 6px;
   color: #ffffff;
+  font-weight: 500;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.6);
 }
 
 .hero__place {
-  font-size: 12px;
+  font-size: 12.5px;
   color: #ecdcd2;
-  margin: 0;
+  margin: 0 0 22px;
   letter-spacing: 0.02em;
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.6);
 }
 
 .scroll-cue {
-  position: absolute;
-  bottom: 24px;
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 6px;
+  gap: 4px;
   color: #eedacf;
   font-size: 9px;
   letter-spacing: 0.24em;
   opacity: 0.85;
   transition: opacity 0.3s;
   animation: scrollBob 2s infinite ease-in-out;
+  text-decoration: none;
 }
 
 .scroll-arrow {
@@ -290,6 +311,246 @@ button {
 }
 
 /* =========================================
+   초대글 연락하기 버튼 (INVITATION CONTACT)
+========================================= */
+.invitation-contact-wrap {
+  margin-top: 36px;
+  display: flex;
+  justify-content: center;
+}
+
+.btn-invitation-contact {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 24px;
+  background: #ffffff;
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #5d5349;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(60, 48, 36, 0.05);
+  transition: all 0.25s ease;
+}
+
+.btn-invitation-contact:hover {
+  border-color: var(--rose);
+  color: var(--rose);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(181, 122, 116, 0.16);
+}
+
+.btn-invitation-contact .contact-btn-icon {
+  color: var(--rose);
+}
+
+/* =========================================
+   축하 연락하기 모달 (CONTACT MODAL)
+========================================= */
+.contact-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.28s ease, visibility 0.28s ease;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.contact-modal.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.contact-modal-backdrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(30, 24, 20, 0.6);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+.contact-modal-dialog {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 360px;
+  max-height: 85vh;
+  background: #ffffff;
+  border-radius: 16px;
+  overflow-y: auto;
+  box-shadow: 0 16px 40px rgba(40, 25, 15, 0.22);
+  transform: translateY(18px) scale(0.96);
+  transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+  padding: 24px 20px 22px;
+}
+
+.contact-modal.active .contact-modal-dialog {
+  transform: translateY(0) scale(1);
+}
+
+.contact-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--line);
+}
+
+.contact-modal-title {
+  font-family: 'Gowun Batang', serif;
+  font-size: 17.5px;
+  font-weight: 500;
+  color: var(--ink);
+  margin: 0;
+}
+
+.contact-modal-close {
+  background: none;
+  border: none;
+  font-size: 26px;
+  line-height: 1;
+  color: #9f9184;
+  cursor: pointer;
+  padding: 0 4px;
+  transition: color 0.2s;
+}
+
+.contact-modal-close:hover {
+  color: var(--ink);
+}
+
+.contact-modal-body {
+  text-align: left;
+}
+
+.contact-group {
+  margin-bottom: 6px;
+}
+
+.contact-group-header {
+  margin-bottom: 8px;
+}
+
+.contact-group-badge {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: 12px;
+  letter-spacing: 0.02em;
+}
+
+.badge-groom {
+  background: #edf3f8;
+  color: #43698f;
+}
+
+.badge-bride {
+  background: #fdf0ed;
+  color: #b5625c;
+}
+
+.contact-modal-divider {
+  height: 1px;
+  background: var(--line-subtle);
+  margin: 16px 0;
+}
+
+.contact-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 4px;
+  border-bottom: 1px dashed rgba(220, 210, 198, 0.65);
+}
+
+.contact-row:last-child {
+  border-bottom: none;
+}
+
+.contact-person {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.contact-relation {
+  font-size: 11.5px;
+  color: var(--muted);
+  min-width: 40px;
+}
+
+.contact-name {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--ink);
+}
+
+.contact-actions {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.contact-action-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  padding: 6px 11px;
+  border-radius: 16px;
+  font-size: 11.5px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.contact-action-btn.call {
+  background: #f7f3ec;
+  color: #554a3e;
+}
+
+.contact-action-btn.call:hover {
+  background: #ebd8cf;
+  color: var(--rose);
+  transform: translateY(-1px);
+}
+
+.contact-action-btn.call svg {
+  color: var(--rose);
+}
+
+.contact-action-btn.sms {
+  background: #f2ede4;
+  color: #554a3e;
+}
+
+.contact-action-btn.sms:hover {
+  background: #ebd8cf;
+  color: var(--rose);
+  transform: translateY(-1px);
+}
+
+.contact-action-btn.sms svg {
+  color: #7d7266;
+}
+
+/* =========================================
    3. CALENDAR (캘린더 & D-DAY)
 ========================================= */
 .date-section {
@@ -350,16 +611,16 @@ button {
 
 .calendar .wedding-day {
   position: relative;
-  width: 32px;
-  height: 30px;
+  width: 36px;
+  height: 32px;
   margin: auto;
   color: #ffffff !important;
   font-weight: 600;
-  font-size: 11.5px;
+  font-size: 12.5px;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-top: 1px;
+  padding-bottom: 2px;
   z-index: 1;
 }
 
@@ -369,10 +630,10 @@ button {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 30px;
-  height: 28px;
+  width: 40px;
+  height: 38px;
   background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23b57a74'%3E%3Cpath d='M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z'/%3E%3C/svg%3E") center / contain no-repeat;
-  filter: drop-shadow(0 2px 4px rgba(181, 122, 116, 0.45));
+  filter: drop-shadow(0 3px 6px rgba(181, 122, 116, 0.45));
   z-index: -1;
 }
 
@@ -553,7 +814,7 @@ button {
 
 .venue-name {
   font-family: 'Gowun Batang', serif;
-  font-size: 22px;
+  font-size: 20px;
   font-weight: 500;
   margin: 0 0 6px;
 }
@@ -859,13 +1120,13 @@ button {
 ========================================= */
 .share-section {
   background: #ffffff;
-  padding-bottom: 70px;
+  padding: 44px 20px 48px;
 }
 
 .share-desc {
   font-size: 13px;
   color: var(--ink-light);
-  margin: -10px 0 28px;
+  margin: 0 0 20px;
 }
 
 .share-actions {
