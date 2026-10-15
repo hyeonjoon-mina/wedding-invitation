@@ -259,7 +259,6 @@ button {
 ========================================= */
 .invitation-section {
   background: var(--paper-card);
-  border-radius: 28px 28px 0 0;
 }
 
 .flower-deco {
