@@ -56,7 +56,7 @@ button {
    1. HERO (메인 헤더 - 스크롤 고정)
 ========================================= */
 .hero {
-  position: sticky;
+  position: relative;
   top: 0;
   z-index: 1;
   min-height: 100vh;
