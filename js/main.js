@@ -1,4 +1,27 @@
 (() => {
+  /* ── 0. Scroll Restoration & Initial Scroll to Hero ── */
+  if ('scrollRestoration' in history) {
+    history.scrollRestoration = 'manual';
+  }
+  window.scrollTo(0, 0);
+
+  // URL 해시(#invitation 등)로 인한 시작 위치 건너뜀 방지
+  if (window.location.hash) {
+    history.replaceState(null, '', window.location.pathname + window.location.search);
+  }
+
+  window.addEventListener('DOMContentLoaded', () => {
+    window.scrollTo(0, 0);
+  });
+
+  window.addEventListener('load', () => {
+    window.scrollTo(0, 0);
+  });
+
+  window.addEventListener('pageshow', () => {
+    window.scrollTo(0, 0);
+  });
+
   /* ── 1. Toast Notification ── */
   const toast = document.getElementById('toast');
   let toastTimer;
@@ -528,9 +551,14 @@
   const shareLinkBtn = document.getElementById('shareLink');
   const legacyShareBtn = document.getElementById('share');
 
+  function getCleanShareUrl() {
+    return window.location.href.split('#')[0];
+  }
+
   async function handleShare() {
+    const cleanUrl = getCleanShareUrl();
     const shareData = {
-      url: window.location.href
+      url: cleanUrl
     };
 
     if (navigator.share && /Android|iPhone|iPad|iPod/i.test(navigator.userAgent)) {
@@ -538,11 +566,11 @@
         await navigator.share(shareData);
       } catch (error) {
         if (error.name !== 'AbortError') {
-          copyText(window.location.href, '청첩장 링크가 복사되었습니다.');
+          copyText(cleanUrl, '청첩장 링크가 복사되었습니다.');
         }
       }
     } else {
-      copyText(window.location.href, '청첩장 링크가 복사되었습니다.');
+      copyText(cleanUrl, '청첩장 링크가 복사되었습니다.');
     }
   }
 
@@ -552,7 +580,7 @@
 
   if (shareLinkBtn) {
     shareLinkBtn.addEventListener('click', () => {
-      copyText(window.location.href, '청첩장 링크가 복사되었습니다.');
+      copyText(getCleanShareUrl(), '청첩장 링크가 복사되었습니다.');
     });
   }
 
@@ -580,9 +608,17 @@
 
     revealElements.forEach(el => revealObserver.observe(el));
 
-    // Scroll cue fade out on scroll
+    // Scroll cue click & fade out on scroll
     const scrollCue = document.querySelector('.scroll-cue');
     if (scrollCue) {
+      scrollCue.addEventListener('click', (e) => {
+        e.preventDefault();
+        const target = document.getElementById('invitation');
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+
       window.addEventListener('scroll', () => {
         scrollCue.style.opacity = window.scrollY > 60 ? '0' : '0.85';
       }, { passive: true });

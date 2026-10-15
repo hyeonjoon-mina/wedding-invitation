@@ -18,6 +18,16 @@
   <title>문현준 ♥ 조민아 결혼합니다</title>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="css/style.css">
+  <script>
+    // 페이지 접속/새로고침 시 메인 헤더(최상단)부터 즉시 표시
+    if ('scrollRestoration' in history) {
+      history.scrollRestoration = 'manual';
+    }
+    if (window.location.hash) {
+      history.replaceState(null, '', window.location.pathname + window.location.search);
+    }
+    window.scrollTo(0, 0);
+  </script>
 </head>
 
 <body>
@@ -120,10 +130,10 @@
           <div class="gallery-item-wrap">
             <button type="button" class="gallery-item" data-index="0" data-image="images/photo21.jpg"
               aria-label="웨딩 사진 1 크게 보기">
-              <img src="images/photo01.jpg" alt="문현준 조민아 웨딩 사진 1" loading="lazy" decoding="async">
+              <img src="images/photo021.jpg" alt="문현준 조민아 웨딩 사진 1" loading="lazy" decoding="async">
             </button>
           </div>
-			<div class="gallery-item-wrap">
+          <div class="gallery-item-wrap">
             <button type="button" class="gallery-item" data-index="0" data-image="images/photo01.jpg"
               aria-label="웨딩 사진 1 크게 보기">
               <img src="images/photo01.jpg" alt="문현준 조민아 웨딩 사진 1" loading="lazy" decoding="async">
