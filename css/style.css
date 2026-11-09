@@ -1327,7 +1327,7 @@ button {
 .modal-nav span {
   display: block;
   line-height: 1;
-  transform: translateY(-2px);
+  transform: translateY(-3px);
 }
 
 .modal-nav:hover {
