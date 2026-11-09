@@ -1324,6 +1324,12 @@ button {
   border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
+.modal-nav span {
+  display: block;
+  line-height: 1;
+  transform: translateY(-2px);
+}
+
 .modal-nav:hover {
   background: rgba(50, 40, 35, 0.85);
   transform: translateY(-50%) scale(1.04);
