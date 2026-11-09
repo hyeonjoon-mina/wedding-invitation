@@ -28,6 +28,24 @@
     window.scrollTo(0, 0);
   }
 
+  /* ── 0-1. 모바일 주소창 스크롤 리사이즈로 인한 최상단 배경 이미지 확대/축소 현상 방지 ── */
+  const lockHeroHeight = () => {
+    const hero = document.getElementById('hero');
+    const heroContent = hero ? hero.querySelector('.hero__content') : null;
+    if (hero && window.innerWidth <= 560) {
+      const fixedHeight = window.innerHeight;
+      hero.style.height = `${fixedHeight}px`;
+      hero.style.minHeight = `${fixedHeight}px`;
+      if (heroContent) {
+        heroContent.style.minHeight = `${fixedHeight}px`;
+      }
+    }
+  };
+  lockHeroHeight();
+  window.addEventListener('orientationchange', () => {
+    setTimeout(lockHeroHeight, 150);
+  });
+
   /* ── 1. Toast Notification ── */
   const toast = document.getElementById('toast');
   let toastTimer;
