@@ -3,24 +3,30 @@
   if ('scrollRestoration' in history) {
     history.scrollRestoration = 'manual';
   }
-  window.scrollTo(0, 0);
 
   // URL 해시(#invitation 등)로 인한 시작 위치 건너뜀 방지
   if (window.location.hash) {
     history.replaceState(null, '', window.location.pathname + window.location.search);
   }
 
-  window.addEventListener('DOMContentLoaded', () => {
-    window.scrollTo(0, 0);
-  });
+  // 사용자가 이미 스크롤을 조작한 경우 늦게 완료된 리소스 로딩(load 이벤트) 등으로 인해 상단으로 튕기는 현상 방지
+  let userHasScrolled = false;
+  const onUserInteraction = () => {
+    userHasScrolled = true;
+  };
 
-  window.addEventListener('load', () => {
-    window.scrollTo(0, 0);
-  });
+  window.addEventListener('wheel', onUserInteraction, { passive: true, once: true });
+  window.addEventListener('touchmove', onUserInteraction, { passive: true, once: true });
+  window.addEventListener('keydown', (e) => {
+    if (['ArrowDown', 'ArrowUp', 'Space', 'PageDown', 'PageUp', 'Home', 'End'].includes(e.key)) {
+      userHasScrolled = true;
+    }
+  }, { passive: true, once: true });
 
-  window.addEventListener('pageshow', () => {
+  // 초기 로드 시 사용자가 스크롤을 시작하기 전에만 최상단(0, 0) 보장
+  if (!userHasScrolled && window.scrollY === 0) {
     window.scrollTo(0, 0);
-  });
+  }
 
   /* ── 1. Toast Notification ── */
   const toast = document.getElementById('toast');
@@ -625,10 +631,26 @@
     }
   }
 
-  /* ── 9. Kakao Roughmap Controller & Cont suppression ── */
+  /* ── 9. Kakao Roughmap Controller & Cont suppression & Marker Icon fix ── */
   const hideKakaoControls = () => {
     document.querySelectorAll('.root_daum_roughmap .wrap_controllers, .root_daum_roughmap .cont, .btn_zoom_in, .btn_zoom_out, .btn_zoom_reset').forEach(el => {
       el.style.setProperty('display', 'none', 'important');
+    });
+
+    // 카카오 지도 내 위치 표시 마커 이미지 엑박 방지
+    document.querySelectorAll('#daumRoughmapContainer1791948268322 img').forEach(img => {
+      const src = img.getAttribute('src');
+      if (src && src.startsWith('//')) {
+        img.src = 'https:' + src;
+      } else if (src && src.startsWith('file://t1.kakaocdn.net')) {
+        img.src = src.replace('file://t1.kakaocdn.net', 'https://t1.kakaocdn.net');
+      }
+      img.onerror = function () {
+        if (!this.dataset.fallbackApplied) {
+          this.dataset.fallbackApplied = 'true';
+          this.src = 'assets/marker_map01.png';
+        }
+      };
     });
   };
   hideKakaoControls();
